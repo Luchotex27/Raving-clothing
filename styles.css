@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #95ffc8;
+    --violeta:#a410dc;
+    --violeta2:#7f0da8;
+    --violeta3:#660d86;
+    --roboto: 'Roboto', sans-serif;
+    --titulos:'Bebas Neue', cursive;
+}
+
+body{
+    position: relative;
+    height: 1000px;
+}
+
+/*************************************************** ACA ARRANCA EL HEADER **************************************/
+.arriba{
+    top: 0;
+}
+header{
+    position: sticky;
+    background: linear-gradient(black 80%, var(--violeta2) 100%);
+    top: 0px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 100vw;
+    background-color: black;
+    color: var(--verde);
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Bebas Neue', cursive;
+    z-index: 2;
+}
+
+    .logo{
+        display: inline-flex;
+        gap: 30px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        color: var(--verde);
+        letter-spacing: 5px;
+        font-weight: 900;
+        line-height: 40px;
+        color: white;
+    }
+
+    .logo > a{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        transition: 1s;
+    }
+    .logo > a:hover{
+        font-size: 32px;
+        transition: 1s;
+    }
+
+.nav_conteinter{
+    padding-left: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+/*************************************************** ACA ARRANCA EL NAVBAR **************************************/
+
+.navbar{
+    gap: 80px;
+    font-size: 25px;
+    display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+    .item{
+        transition: 1.5s;
+        color: var(--verde);
+        text-decoration:none;
+        color: white;
+    }
+
+    .item:hover{
+        font-size: 35px;
+        transition: 1.5s;
+    }
+
+/*************************************************** OPCIONES DE LOGUEO/REGISTRO **************************************/
+.logueo{
+    padding-top: 10px;
+}
+
+    .logueo_options{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        font-size: 20px;
+        list-style: none;
+        text-decoration: underline;
+        color: white;
+    }
+/*************************************************** ACA ARRANCA EL REGISTRO **************************************/
+.register{
+    display: none;
+    cursor: pointer;
+}
+    .register_form{
+        position: fixed;
+        width: 100vw;
+        display: none;
+        height: 100vh;
+        background-color: rgba(83, 83, 94, 0.486);
+        cursor: pointer;
+    }
+    .register:checked ~ .register_form{
+        display: flex;
+        cursor: default;
+        top: 0px;
+        right: -1px; 
+        position: fixed;
+    }
+    .register_lbl{
+        cursor: pointer;
+    }
+    .login_lbl{
+        cursor: pointer;
+    }
+
+
+        .conteiner_formulario{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 35vw;
+            margin-right: 32.5vw;
+        }
+            .formulario{
+                box-sizing: border-box;
+                padding-left: 50px;
+                padding-right: 50px;
+                top: 70vh;
+                width: 35vw;
+                height: 80vh;
+                background: #000 center/cover url("Fondo_registro2.jpg") no-repeat;
+                box-shadow: 0px 0px 40px 40px black;
+                border: #7f0da8;
+                border-style:double;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                cursor: default;
+            }
+
+                .formulario > h2{
+                    margin-bottom: 50px;
+                    letter-spacing: 5px;
+                }
+
+                .texto{
+                    width: 95%;
+                }
+
+                .genero_styleo{
+                    display: inline-flex;
+                    gap: 10px;
+                }
+
+/******************************************** X DE VOLVER AL INICIO  *****************************************/
+                .form_reg_X{
+                    color: white;
+                    font-size: 60px;
+                    position:absolute;
+                    top: 10px;
+                    right: 0;
+                    cursor: pointer;
+                }
+
+                .conteiner_x{
+                    width: 100%;
+                    height: 1%;
+                    position: relative;
+                }
+
+/*********************************************** BOTON DE SUBMIT ***************************************************/
+
+                .cont_button_submit{
+                    margin-top: 60px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                    .button_submit{
+                        background-color: white;
+                        color: black;
+                        border: var(--verde) ;
+                        /* box-shadow: 0px 0px 20px 10px var(--verde); */
+                        font-size: 20px;
+                        font-family: 'Bebas Neue', cursive;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+
+/*************************************************** ACA ARRANCA EL LOGUEO **************************************/
+.login{
+    display: none;
+}
+
+    .login_form{
+        position: fixed;
+        width: 100vw;
+        display: none;
+        height: 100vh;
+        background-color: rgba(83, 83, 94, 0.486);
+        cursor: pointer;
+        top: 1;
+    }
+    .login:checked ~ .login_form{
+        display: flex;
+        cursor: default;
+        top: 0px;
+        right: -1px; 
+        position: fixed;
+    }
+    
+        .conteiner_formulario_login{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 35vw;
+            margin-right: 32.5vw;
+        }
+
+            .formulario_login{
+                box-sizing: border-box;
+                padding-left: 50px;
+                padding-right: 50px;
+                top: 70vh;
+                width: 35vw;
+                height: 50vh;
+                background: #000 center/cover url("Fondo_registro2.jpg") no-repeat;
+                box-shadow: 0px 0px 40px 40px black;
+                border: #7f0da8;
+                border-style:double;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                cursor: default;
+            }
+
+            .formulario_login > h2{
+                margin-bottom: 25px;
+                letter-spacing: 5px;
+                
+            }
+            
+            .cont_button_submit_login{       
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            
+/*************************************************** ACA TERMINA EL LOGUEO **************************************/
+            
+.fondo{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -4;
+    background: linear-gradient(90deg, var(--violeta3) 0%, black 25%,black 75%, var(--violeta3) 100%);   
+}
+
+.conteiner_sections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .section1{
+        font-family: var(--roboto);
+        margin-top: 50px;
+        width: 75vw;
+        height: 400px;
+        background-color: black;
+        border:solid var(--verde);
+        box-shadow: 0px 0px 50px var(--verde);
+        color: white;
+        padding: 35px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+        .parte1_section1{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+
+
+
+        .part2_section1{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        } 
+
+            .img_section1{
+                margin-left: 10px;
+                width: 95%;
+                border-radius: 40px;
+                box-shadow: 0px 0px 20px var(--verde);
+            }
