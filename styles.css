@@ -19,7 +19,6 @@
 
 body{
     position: relative;
-    height: 1000px;
 }
 
 /*************************************************** ACA ARRANCA EL HEADER **************************************/
@@ -33,7 +32,7 @@ header{
     box-sizing: border-box;
     padding-top: 15px;
     padding-bottom: 20px;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     color: var(--verde);
     display: inline-flex;
@@ -86,33 +85,111 @@ header{
 
 }
 
-    .item{
-        transition: 1.5s;
-        color: var(--verde);
-        text-decoration:none;
-        color: white;
-    }
-
-    .item:hover{
-        font-size: 35px;
-        transition: 1.5s;
-    }
-
-/*************************************************** OPCIONES DE LOGUEO/REGISTRO **************************************/
-.logueo{
-    padding-top: 10px;
+.item{
+    transition: 1.5s;
+    color: var(--verde);
+    text-decoration:none;
+    color: white;
 }
 
-    .logueo_options{
+.item:hover{
+    font-size: 35px;
+    transition: 1.5s;
+}
+
+    
+    .hamburguesa{
+        display: none;
+        position: relative;
+    }
+
+    .menu_hamburguesa_items{
+        width: 85vw;
+        height: 75vh;
+        background-color: blue;
+        position: absolute;
+        top: 85;
+        right: 0;
+        background: #000 center/cover url("Fondo_registro2.jpg") no-repeat;
+        border: solid white;
+        box-shadow: 0px 0px 20px black;
+        display: none;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .navbar_burger{
+        list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        font-size: 20px;
-        list-style: none;
-        text-decoration: underline;
-        color: white;
+        gap: 30px;
     }
+
+    #menu_hamburguesa{
+        display: none;
+    }
+
+        .item_b{
+            color: white;
+            font-family: var(--titulos);
+            
+            text-decoration: none;
+        }
+
+    
+        @media(max-width:1200px){
+
+            
+            .nav_conteinter{
+                padding-left: 75%;
+            }
+            .hamburguesa{
+                display: flex;
+                font-size: 40px;
+                color: white;
+            }
+            .navbar{
+                display: none;
+            }
+            .register_lbl{
+                display: none;
+            }
+            .login_lbl{
+                display: none;
+            }
+            #menu_hamburguesa:checked ~ .menu_hamburguesa_items{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;    
+            
+            }
+        
+            .register_menu{
+                display: none;
+            }
+                .register_menu:checked ~ .register_form{
+                    display: block;
+
+                }
+
+        }
+
+    /*************************************************** OPCIONES DE LOGUEO/REGISTRO **************************************/
+    .logueo{
+        padding-top: 10px;
+    }
+
+        .logueo_options{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            font-size: 20px;
+            list-style: none;
+            text-decoration: underline;
+            color: white;
+        }
 /*************************************************** ACA ARRANCA EL REGISTRO **************************************/
 .register{
     display: none;
@@ -208,7 +285,6 @@ header{
                         background-color: white;
                         color: black;
                         border: var(--verde) ;
-                        /* box-shadow: 0px 0px 20px 10px var(--verde); */
                         font-size: 20px;
                         font-family: 'Bebas Neue', cursive;
                         padding-left: 5px;
@@ -287,6 +363,7 @@ header{
 
 .conteiner_sections{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -295,7 +372,6 @@ header{
         font-family: var(--roboto);
         margin-top: 50px;
         width: 75vw;
-        height: 400px;
         background-color: black;
         border:solid var(--verde);
         box-shadow: 0px 0px 50px var(--verde);
@@ -303,19 +379,43 @@ header{
         padding: 35px;
         display: flex;
         justify-content: space-around;
-    }
+        position: relative;
+        flex-wrap: wrap;
+        }
 
         .parte1_section1{
             width: 40%;
             display: flex;
             flex-direction: column;
-            justify-content:space-between;
+            justify-content:space-around;
+            text-align: center;
+            min-width: 200px;
         }
 
+        .parte1_section1 > h1{
+            text-align: center;
+            background-color: var(--violeta3);
+            padding: 5px;
+            border-radius: 40px;
+            font-family: var(--titulos);
+            letter-spacing: 4px;
+            box-shadow: 0px 0px 20px white;
+        }
+
+        @media (max-width: 1200px){
+            .parte1_section1{
+                gap: 9px;
+                margin-bottom: 10px;
+            }
+
+        }
+            
+        
 
 
         .part2_section1{
             width: 50%;
+            min-width: 300px;
             display: flex;
             justify-content: center;
         } 
@@ -325,4 +425,339 @@ header{
                 width: 95%;
                 border-radius: 40px;
                 box-shadow: 0px 0px 20px var(--verde);
+
             }
+
+    /******************************* ACA TERMINA LA SECTION 1 *********************************/
+.fantasma_producto{
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: -30px;
+}
+
+.section2{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.titulo_section2{
+    font-family: var(--roboto);
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width: 75vw;
+    height: 10px;
+    background-color: black;
+    border:solid var(--verde);
+    box-shadow: 0px 0px 50px var(--verde);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .section2_p1{
+        padding-top: 15px;
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 1200px){
+        .section2_p1{
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .conteiner_slides{
+        font-family: var(--roboto);
+        width: 75vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 45px;
+    }
+
+    .slide_ropa{
+        font-family: var(--titulos);
+        box-shadow: 0px 0px 15px white;
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+        font-size: 20px;
+        background-color: #000;
+        background: #000 center/cover url("Fondosection2.jpg") no-repeat;
+        text-shadow: 0px 0px 40px  black;
+        margin-bottom: 30px;
+    }
+
+        .slide_ropa > button{
+            background-color: var(--violeta3);
+            font-family: var(--Roboto);
+            padding:5px;
+            cursor: pointer;
+            color: white;
+            text-shadow: 0px 0px 15px  black;
+            box-shadow: 0px 0px 10px white;
+        }
+
+
+        .imagen_ropa{
+            box-shadow: 0px 0px 5px white;
+            max-width: 300px;
+            max-height: 350px;
+            border-radius: 20px;
+        }
+
+/*************************************** ACA TERMINA LA SECTION 2 *********************************************/
+
+.fantasma_clientes{
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: -40px;
+}
+
+.section3{
+    position: relative;
+    background-color: black;
+    border:solid var(--verde);
+    box-shadow: 0px 0px 50px var(--verde);
+    color: white;
+    width: 75vw;
+    margin-top: 80px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 25px;
+    font-family: var(--roboto);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+    .titulo_clientes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clientes{
+        display: inline-flex;
+        justify-content: center;
+        gap: 35px;
+        flex-wrap: wrap;
+
+    }
+
+    .logo_clientes{
+        border-radius: 50%;
+        max-width: 100px;
+        box-shadow: 0px 0px 15px white;
+    }
+
+
+/*************************************** ACA TERMINA LA SECTION 3 *********************************************/
+
+.fantasma_contactos{
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: -40px;
+}
+
+.section4{
+    font-family: var(--roboto);
+    margin-top: 110px;
+    width: 75vw;
+    background-color: black;
+    border:solid var(--verde);
+    box-shadow: 0px 0px 25px var(--verde);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    @media (max-width:1200px){
+        .section4{
+            padding: 25px;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .local{
+            width: 100%;
+            box-shadow: 0px 0px 15px white;
+            border-radius: 20px;
+            min-width: 200px;
+        }
+
+        .section4_p2{
+            width: 100%;
+        }
+
+        .conteiner_datos_contacto{
+            width: 100%;
+        }
+    }
+
+    .section4_p2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 70px;
+        align-items: center;
+        box-shadow: 0px 0px 15px var(--violeta);
+        height: 100%;
+        padding: 20px;
+        border-radius: 40px;
+        background: #000 center/cover url("Fondo_comun2.jpg") no-repeat;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .titulo_contacto{
+        font-family: var(--titulos);
+        letter-spacing: 3px;
+        background-color: black;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 40px;
+        box-shadow: 0px 0px 10px white;
+    }
+
+        .conteiner_datos_contacto{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px white;
+            padding: 10px;
+        }
+
+            .datos_contacto{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 40px;
+                font-weight: 500;
+                
+            }
+
+                .dato{
+                    font-family: var(--titulos);
+                }
+
+            .local{
+                max-width: 400px;
+                box-shadow: 0px 0px 15px white;
+                border-radius: 20px;
+                min-width: 200px;
+            }
+
+            .logo_contactos{
+                border-radius: 50%;
+                width: 50px;
+                box-shadow: 0px 0px 20px black;
+            }
+
+
+    /*************************************** ACA TERMINA LA SECTION 4 *********************************************/
+
+footer{
+    width: 100%;
+    margin-top: 80px;
+    background: linear-gradient(var(--violeta2) 0%, black 10%);
+    padding: 25px;
+    padding-top: 30px;
+    color: white;
+    font-family: var(--roboto);
+}
+
+    .conteiner_footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+        .logo_footer{
+            border-radius: 50%;
+            max-width: 150px;
+        }
+
+        .Raving_seguinos{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 30%;
+        }
+
+        .redes_footer{
+            color: white;
+        }
+ 
+
+            .titulo_footer{
+                font-family: var(--titulos);
+                color: var(--verde);
+                font-size: 25px;
+            }
+
+            .logos_seguinos{
+                display: flex;
+                justify-content: left;
+                gap: 20px;
+                font-size: 20px;
+            }
+
+
+                .item_footer{
+                    cursor: pointer;
+                }
+
+                .lista_footer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1px;
+                }
+
+                .asistencia{
+                    height: 100%;
+                    top: 0%;
+                }
+
+                .linea{
+                    height: 1px;
+                    width: 100%;
+                    background-color: white;
+                }
+
+
+    @media (max-width:1200px){
+        .logo_footer{
+            width: 80%;
+        }
+        .conteiner_footer{
+            gap: 5px;
+        }
+    }
+    @media (max-width:600px){
+        .lista_footer{
+            list-style: none;
+        }
+    }
+/***************************** ACA ARRANCA PARTE DE RESPONSIVE  ********************************/
+

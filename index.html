@@ -4,25 +4,47 @@
     <meta name="viewport" content="width=device-width"/> 
     <link rel="stylesheet" href="styles.css">
     <title>Raving Clothing | Home</title>
+    <link rel="icon" href="Logo.png">
+    <script src="https://kit.fontawesome.com/39a78daf86.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="arriba" id="arriba"></div>
+
     <!--*****************************ACA ARRANCA EL HEADER****************************************************-->
     <header>
 <!--********************************************LOGO DEL HEADER********************************************-->
         <div class="logo">
             <img src="Logo.png" alt="Nuestro logo" class="logo">   
-            <a href="#arriba" id="arriba">Raving Clothing</a>
+            <a href="#" id="arriba">Raving Clothing</a>
         </div>
 <!--********************************************ENLACES DEL HEADER********************************************-->
-        <div class="nav_conteinter">
-            <ul class="navbar">
-                <li><a href="#" class="item" id="Productos">Productos</a></li>
-                <li><a href="#" class="item" id="Clientes">Clientes</a></li>
-                <li><a href="#" class="item" id="Contactanos">Contactanos</a></li>
-            </ul>
-        </div>
+  
+        <nav class="nav_conteinter">
+            <label for="menu">
+
+            </label>
+                <ul class="navbar">
+                    <li><a href="#productos" class="item" >Productos</a></li>               
+                    <li><a href="#clientes" class="item">Clientes</a></li>
+                    <li><a href="#contactos" class="item" id="Clientes">Contactanos</a></li>
+                </ul>
+
+                <div class="hamburguesa">
+
+                    <label for="menu_hamburguesa">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <input type="checkbox" name="menu_hamburguesa" id="menu_hamburguesa">
+
+                    <div class="menu_hamburguesa_items">
+                        <ul class="navbar_burger">
+                            <li><a href="#productos" class="item_b" >Productos</a></li>               
+                            <li><a href="#clientes" class="item_b">Clientes</a></li>
+                            <li><a href="#contactos" class="item_b" id="Clientes">Contactanos</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    
 <!--****************************************LOGIN Y REGISTER DEL HEADER********************************************-->
         <div class="logueo">
             <div class="logueo_conteinter">
@@ -125,21 +147,212 @@
     </header>
     <!--************************************************ACA TERMINA EL HEADER***********************************-->
 
-    <div class="fondo"></div>
+<div class="fondo"></div>
+<main>
     <div class="conteiner_sections">
         <section class="section1">
             <div class="parte1_section1">
                 <h1>Raving Clothing</h1>
                 <p>
-                    Nosotros somos Raving Clothing.
+                    Nosotros somos Raving Clothing, una empresa diseñadora y productora de ropa
                 </p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A harum itaque ratione officiis commodi inventore, atque expedita fugiat quas exercitationem.</p>
+                <p>Nuestro objetivo como empresa es crear ropa para que todos puedan usar y sentirse identificados de alguna manera u otra, rompiendo con el estándar de lo convencional</p>
             </div>
 
             <div class="part2_section1">
                 <img src="imagen_section1.png" alt="Escalera en la Bond Street" class="img_section1">
             </div>
+            <div class="fantasma_producto"  id="productos"></div>
+        </section>
+        <!--*****************************************ACA TERMINA LA 1RA SECTION***********************************-->
+    
+        <section class="section2">
+            <div class="titulo_section2">
+                <h2 >Nuestros Productos</h2>
+            </div>
+
+            <div class="conteiner_slides">
+
+                <div class="section2_p1">
+                    <div class="conteiner_ropa">
+                        <div class="slide_ropa">
+                            <img src="RemeS1.png" alt="Diseño de remera" class="imagen_ropa">
+                            <p>Remeras</p>
+                            <button class="button_carrito">Ver catálogo</button>
+                        </div>
+                    </div>
+
+                    <div class="conteiner_ropa">
+                        <div class="slide_ropa">
+                            <img src="hoddieS1.png" alt="Diseño de remera" class="imagen_ropa">
+                            <p>Hoodies</p>
+                            <button class="button_carrito">Ver catálogo</button>
+                        </div>
+                    </div>
+                    <div class="conteiner_ropa">
+                        <div class="slide_ropa">
+                            <img src="Top.png" alt="Diseño de remera" class="imagen_ropa">
+                            <p>Tops</p>
+                            <button class="button_carrito">Ver catálogo</button>
+                        </div>
+                    </div>
+                
+                    <div class="conteiner_ropa">
+                        <div class="slide_ropa">
+                            <img src="Bolsa.png" alt="Diseño de remera" class="imagen_ropa">
+                            <p>Bolsas de mano</p>
+                            <button class="button_carrito">Ver catálogo</button>
+                        </div>
+                    </div>
+                    <div class="conteiner_ropa">
+                        <div class="slide_ropa">
+                            <img src="Gorra.png" alt="Diseño de remera" class="imagen_ropa">
+                            <p>Gorras con visera</p>
+                            <button class="button_carrito">Ver catálogo</button>
+                        </div>
+                    </div>
+                    <div class="conteiner_ropa">
+                        <div class="slide_ropa">
+                            <img src="Gorro.png" alt="Diseño de remera" class="imagen_ropa">
+                            <p>Gorros de lana</p>
+                            <button class="button_carrito">Ver catálogo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fantasma_clientes" id="clientes"></div>
+        </section>
+
+        <!--******************************* ACA TERMINA LA SECTION 2 *************************************-->
+
+        <section class="section3">
+            <div class="titulo_clientes">
+                <h2>Clientes que confían en nosotros</h2>
+            </div>
+
+            <div class="clientes">
+                <img src="Marca1.png" alt="" class="logo_clientes">
+                <img src="marca2.png" alt="" class="logo_clientes">
+                <img src="marca3.png" alt="" class="logo_clientes">
+                <img src="marca4.png" alt="" class="logo_clientes">
+            </div>
+
+            <div class="fantasma_contactos" id="contactos"></div>
+        </section>
+
+    
+
+        <!--****************************** ACA TERMINA LA SECTION 3 *************************************-->
+
+        <section class="section4">
+            <div class="section4_p1">
+                <img src="Imagen_local.jpg" alt="Nuestro local" class="local">
+            </div>
+           
+            <div class="section4_p2">
+                <div class="titulo_contacto" id="contacto">
+                    <h2>¿Alguna consulta? ¡Contactanos!</h2>
+                </div>
+
+                <div>
+                    <ul class="conteiner_datos_contacto">
+                            <li class="datos_contacto">
+                                <div>
+                                    <p class="dato">Teléfono:</p>
+                                </div>
+
+                                <div>
+                                    <p>4444-4444</p>
+                                </div>
+                            </li>
+
+                            <li class="datos_contacto">
+                                <div>
+                                    <p class="dato">Dirección:</p>
+                                </div>
+
+                                <div>
+                                    <p>Mi dirección</p>
+                                </div>
+                            </li>
+
+                            <li class="datos_contacto">
+                                <div>
+                                    <p class="dato">Correo electrónico:</p>
+                                </div>
+
+                                <div>
+                                    <p>correoelectronico@correo.com</p>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="Logo.png" alt=""  class="logo_contactos">
+                </div>
+            </div>
         </section>
 
     </div>
+</main>
+<!--************************************* ACA TERMINA LA SECTION 4 *******************************-->
+
+    <footer>
+            <div class="conteiner_footer">
+
+                <div class="cont_logo_footer">
+                    <img src="Logo.png" alt="Nuestro logo" class="logo_footer">
+                </div>
+
+                <div class="Raving_seguinos">
+                    <div class="Raving_footer">
+                        <p class="titulo_footer">Empresa</p>
+
+                        <p>Acá va la info de la empresa que ahora mismo no puedo inventar porque tengo el bocho de quemado de programar esta página</p>
+                    </div>
+                
+                    <div class="redes_footer">
+                        <div>
+                            <p class="titulo_footer">Seguinos</p>
+                        </div>
+
+                        <div class="logos_seguinos">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter-square"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asistencia">
+                    <p class="titulo_footer">Necesitás ayuda</p>
+
+                    <ul class="lista_footer">
+                        <li>
+                            <label href="#" class="item_footer"> Cómo realizar pedidos</label>
+                        </li>
+                            <div class="linea"></div>
+                        <li>
+                            <label href="#" class="item_footer"> Términos y condiciones</label>
+                        </li>
+                        <div class="linea"></div>
+                        <li>
+                            <label href="#" class="item_footer"> Pagos y envíos</label>
+                        </li>
+                        <div class="linea"></div>
+                        <li>
+                            <label href="#" class="item_footer"> Preguntas frecuentes</label>
+                        </li>
+                        <div class="linea"></div>
+                        <li>
+                            <label href="#" class="item_footer"> Contacto</label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+    </footer>
 </body>
